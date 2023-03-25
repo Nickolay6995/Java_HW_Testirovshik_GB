@@ -7,29 +7,30 @@ package Task2;
 
 public class MainClassFromTaskTwo {
     public static void main(String[] args) {
-        int k = 3;
+        int val = 3;
         int[] b = {1,2,4,5,6,7,3,4,3,5,3,4,3,6,3,8};
-        int[] a = b;
+        int[] a;
+        a = b;
 
-        for(int i =0; i<b.length; i++){
-            System.out.print(b[i]+" ");
+        for (int j : b) {
+            System.out.print(j + " ");
         }
         System.out.println();
-        numtoend(a, b, k);
+        numtoend(a, b, val);
     }
-    public static void numtoend (int[]a, int[]b, int k){
+    public static void numtoend (int[]a, int[]b, int val){
         int j =0;
-        for(int i = 0; i<b.length; i++){
-            if (b[i] != k) {
-                a[j]=b[i];
+        for (int k : b) {
+            if (k != val) {
+                a[j] = k;
                 j++;
             }
         }
         for(int i = j; i<a.length; i++){
-            a[i]=k;
+            a[i]=val;
         }
-        for(int i = 0; i<a.length; i++){
-            System.out.print(a[i]+" ");
+        for (int k : a) {
+            System.out.print(k + " ");
         }
     }
 }

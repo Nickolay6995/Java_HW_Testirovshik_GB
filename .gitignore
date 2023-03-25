@@ -2,6 +2,7 @@
 .idea/
 !.idea/icon*.png
 *.iml
+.xml
 build/
 src/main/gen
 src/main/resources/templates.list
